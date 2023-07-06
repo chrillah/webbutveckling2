@@ -105,7 +105,6 @@ for (let j = 1; j <= blocks; j++){
     length = ''
 }
 let chessBoard = width;
-
 console.log(chessBoard)
 
 
