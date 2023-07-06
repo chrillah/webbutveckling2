@@ -80,7 +80,7 @@ console.log('Summering Måndag - introduktion')
 
 // chessboard
 let blocks = 8
-let black = "[+]"
+let black = "[0]"
 let white = "[ ]"
 let length = '';
 let width = '';
