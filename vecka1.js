@@ -222,6 +222,8 @@ console.log('Summering Onsdag - funktioner, operatorer, villkor(conditional), lo
 // Functions and side effect - funktioner som returnera ett värde är mer användbar, pure function utför endast ett specifik instruktion
 
 // OobS!!! Diagnostiskt prov 6/7
+// expressions är ett matematisk uträkning, ett uttryck som 12 + 11
+// 
 
 // FREDAG:
 // Video 13 - function and if-statement
