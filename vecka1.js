@@ -79,6 +79,45 @@ console.log('Summering Måndag - introduktion')
 // }
 
 // chessboard
+let blocks = 8
+let black = "[+]"
+let white = "[ ]"
+let length = '';
+let width = '';
+for (let j = 1; j <= blocks; j++){
+    for (let i = 1; i <= blocks; i++){
+        if(j % 2 !== 0){
+            if(i % 2 !== 0){
+                length += black
+            } else{
+                length += white
+            }
+        }
+        else {
+            if(i % 2 === 0){
+                length += black
+            } else{
+                length += white
+            }
+        }
+    }
+    width += length + `\n`
+    length = ''
+}
+let chessBoard = width;
+
+console.log(chessBoard)
+
+
+// console.log(width)
+// for (let i = 1; i <= 8; i++){
+//     if(i % 2 ){
+//         length += "#"
+//     } else{
+//         length += "[]"
+//     }
+// }
+// console.log(length)
 
 console.log('Summering Tisdag - variabler')
 
@@ -223,7 +262,7 @@ console.log('Summering Onsdag - funktioner, operatorer, villkor(conditional), lo
 
 // OobS!!! Diagnostiskt prov 6/7
 // expressions är ett matematisk uträkning, ett uttryck som 12 + 11
-// 
+//
 
 // FREDAG:
 // Video 13 - function and if-statement
