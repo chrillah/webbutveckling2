@@ -23,6 +23,8 @@
 // Automatic type conversion - typiskt javascript grej, konverterar om automatisk data typer för att passa in / räkna ut
 // Short-Circuiting of logical operators
 
+console.log('Summering Måndag - introduktion')
+
 // TISDAG: Fortsätting på values, types och operators.
 // unary operators - en sån operator agerar på en enda operand eller variabel. EX: (minus)-tecknet
 // boolean,
@@ -78,6 +80,36 @@
 
 // chessboard
 
+console.log('Summering Tisdag - variabler')
+
+// Video 3
+// Must allways be VAR(?)
+// Declaring variable without assign a value
+// var day;
+// Declare variable and assign a value
+// var assignValue = 567757;
+
+// Numeric value - numbers
+// var years = 38;
+// String variable - text anc characters - must use double quotes marks
+// var someText = " years old";
+// Boolean - true / false
+// var gameOver = true;
+
+// Function is the action or behaviour. Where we work with our variables
+// alert(years + someText);
+// Why use variables? Storage - programs memory - and we can REUSE them
+// Variables naming: can only start with letter or _
+// Variable are case sensitive
+
+// Video 4
+// Javascript is a loosely typed language - eftersom man inte behöver deklarera datatyp på variabeln
+// Java är en strongly language eftersom man måste deklara datatypen när man skapar en variabel
+
+// Video 5
+// Förklrarar hur man kan anävnda en seperat script-fil och hur man monterar den
+
+
 // ONSDAG: Program structure -> Expressions and statements - control flow
 // video 6 - introduction till funktioner
 // function saySomething(){alert('Something)}
@@ -88,6 +120,79 @@
 // video 11 - Loops while(condition){//statement}
 // video 12 - Loops part 2 for(loop) for(let i = 0; i< array.length; i++){loop}
 // läsa kap 2 - programme structure: updating variables succinctly - comments
+
+console.log('Summering Onsdag - funktioner, operatorer, villkor(conditional), loops')
+// Video 6
+// Functions - key to understanding Javascript
+// Function naming is like naming variables, and innanför måsvingarna har man statement
+
+// function saySomething () {
+//     alert('Something')
+// }
+// saySomething()
+
+// Video 7
+// Passing data to a function - parametrar till statement och argument till funktionen
+// function addSomething(num, str) {
+//     var add = num + str;
+//     alert(add)
+// }
+// addSomething(2,' string')
+
+// Video 8
+// Operators - Arithmetic and Assignment operators
+// var number1 = 7;
+// var number2 = 4;
+
+// var number1 = number1 + number2; // Arithmetic operator adderar
+// number1 += number2 // compound operator += - lägger till ursprunglia med en till
+// number1++ // incremental operator - lägger till en
+
+// console.log(number1)
+
+// operator precedence - ordning i hur man ska räkna ut
+// multiplikation och division operatorer har företräde före addition och subtration
+
+// multiplikationen körs först med numret närmast, i det här fallet, 3
+// var number3 = 4 + 3 * 5;
+// console.log(number3)
+
+// Vill man att additionen körs före, sätter man det inom en parantes
+// var number4 = (4+3) * 5;
+// console.log(number4)
+
+// Video 9
+// Conditional villkor if(villkor){statement}, villkoret måste vara sann eller falsk
+// var food = 'Meat';
+
+// if( food == 'Apple'){
+//     console.log('Japp')
+// } else {
+//     console.log('Nope')
+// }
+
+// Video 10 else if
+// var food = "Apple"
+// if( food == 'Apple'){
+//     console.log('we ate fruits')
+// } else if (food == "Meat"){
+//     console.log('we ate meats. blä')
+// } else {
+//     console.log('we ate something else')
+// }
+
+// Video 11 - loops While loops, körs så länge villkoret uppfylls eller till falskt
+// while (condition) {statement} <- villkoret får inte förbli, måste bli falskt
+// var i = 1;
+// while(i <= 5){
+//     console.log(i);
+//     i++;
+// };
+
+// Video 12 - for loop for(let i = 0; i < .lenght; i++){statement}
+// for(let i = 1; i <= 5; i++){
+//     console.log(i)
+// }
 
 // TORS: Göra övningarna (loop a triangle, fizzbuzz, chessboard)
 // Kap 3: functions gick igenom:
@@ -125,3 +230,53 @@
 // video 16 - pass by value (argument och parametrar)
 // läsa kap 3 - functions closure - recursion
 // läsa kap 3 - functions growing functions and side effect
+
+// Video 13
+// en function med if-statment med en if-statment som innehåller två villkor
+// function batting(player, distance) {
+//     if (distance <= 350 && distance > 0){
+//         console.log(player+ ' hit the ball')
+//     } else if (distance <= 0){
+//         console.log(player + ' STRUCK OUT')
+//     }
+//     else {
+//         console.log(player + ' hit a home run')
+//     }
+// }
+// batting('Christopher', 400)
+
+// video 14 - return statement
+// function add(x,y){
+//     return x * y ;
+// }
+// var result = add(6,5);
+// console.log(result)
+
+// video 15
+// Global variable
+// var name = "Henry";
+// function printName() {
+//     name2="Sarah"; // local variable
+// }
+// printName()
+
+// utan var blir variabeln en global variabel
+// console.log(name2)
+
+// video 16 - skillnaden mellan en parameter och en agument
+// argument skickas in till funktioner och används som parametrar i funktionens statement
+
+// 2) parametrar tar emot
+// function batting(player, distance) {
+//     if (distance <= 350 && distance > 0){
+//         console.log(player+ ' hit the ball')
+//     } else if (distance <= 0){
+//         console.log(player + ' STRUCK OUT')
+//     }
+//     else {
+//         console.log(player + ' hit a home run')
+//     }
+// }
+
+// 1) Argument skickas in
+// batting('Christopher', 400)
