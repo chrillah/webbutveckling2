@@ -112,13 +112,13 @@
 
 // ATT LOGGA
 // notera att man behäver inte tillskriva ett värde när man skapar en property
-let journal = []
-function addEntry(events, squirrel) {
-    journal.push({events, squirrel});
-}
-addEntry(["work", "touched tree", "pizza", "running", "television"], false)
-addEntry(['work', 'ice cream', 'cauliflower', 'lasagna', 'touched tree', 'brushed teeth'], false)
-addEntry(['weekend', 'cycling', 'break', 'peanuts', 'beer'], true)
+// let journal = []
+// function addEntry(events, squirrel) {
+//     journal.push({events, squirrel});
+// }
+// addEntry(["work", "touched tree", "pizza", "running", "television"], false)
+// addEntry(['work', 'ice cream', 'cauliflower', 'lasagna', 'touched tree', 'brushed teeth'], false)
+// addEntry(['weekend', 'cycling', 'break', 'peanuts', 'beer'], true)
 
 // Beräkna en korrelation, i bokens exempel så extraherar en tabell för en specifik händelse från dagboken, genpm att loopa igenom inmatingne
 // Computing correlation
@@ -254,6 +254,31 @@ addEntry(['weekend', 'cycling', 'break', 'peanuts', 'beer'], true)
 // The Math Object
 
 
-//
+// excersise
+
+// range
+function range(num1, num2, num3){
+    let range = [];
+
+    if(num1 > num2 ){
+        for(let i = num1; i >= num2; i--){
+            range.push(i);
+            if(num3) {
+                i -= (num3 -1)
+            }
+        }
+    } else {
+        for(let i = num1; i <= num2; i++){
+            range.push(i);
+            if(num3) {
+                i += (num3 -1)
+            }
+        }
+    }
+    return range;
+}
+
+console.log(range(5, 2));
+
 
 // Tisdag
