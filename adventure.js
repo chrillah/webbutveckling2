@@ -1,5 +1,5 @@
 // Global variables
-const BOOMER_ALERT = 13
+const BOOMER_ALERT = 20
 const THE_RIGHT_CHOICE = 3
 const MINIMUM_POWER = 3
 const MAXIMUM_POWER = 7
@@ -15,7 +15,6 @@ var playAgain = true
 alert('Life: An Adventure')
 confirm('Are you ready to play?')
 while (continuingGame) {
-    playAgain = true
     while (!nameCheck) {
         var name = prompt("What's your name, playah?")
         if (typeof name == 'string') {
@@ -37,8 +36,8 @@ while (continuingGame) {
     while (!ageCheck) {
         var age = parseInt(prompt(name + " , what's your age?"))
         if (Number.isInteger(age)) {
-            if (age === null || age === -Infinity) {
-                alert('Impossible! You must have an age! Try again.')
+            if (age === null || age <= 0 || age > 200) {
+                alert('Impossible! Try again.')
             } else {
                 ageCheck = true
             }
@@ -111,7 +110,7 @@ while (continuingGame) {
                 'I did warn you, now our rockets are gone. And so are we, drifting in to the black hole... Good bye'
             )
         } else {
-            alert("Puh! That's was a close one! Good job captain " + name+"!")
+            alert("Puh! That's was a close one! Good job captain " + name + '!')
         }
     } else {
         alert(boomerStory_part1)
@@ -121,12 +120,16 @@ while (continuingGame) {
             yourChoice = parseInt(prompt('Was it ' + [...listOfThoughts] + '?'))
             if (Number.isInteger(yourChoice)) {
                 if (yourChoice < 1 || yourChoice > 3) {
-                    alert('Wake up ' + name + ', not an option, try again!')
+                    alert(
+                        'Wake up ' +
+                            name +
+                            ', not an option, try again! Is it 1, 2 or 3?'
+                    )
                 } else {
                     numberCheck = true
                 }
             } else {
-                alert('Oh come on! Incorrect, try again!')
+                alert('Oh come on! Incorrect, try again! Is it 1, 2 or 3?')
             }
         }
         numberCheck = false
@@ -150,6 +153,7 @@ while (continuingGame) {
         }
     }
 
+    playAgain = true
     while (playAgain) {
         playerAnswer = prompt('Play again? yes / no?')
         if (
