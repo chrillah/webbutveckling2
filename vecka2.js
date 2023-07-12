@@ -1,4 +1,5 @@
 // Måndag - ett äventyr med javascript deadline 16/7
+// MÅSTE SKRIVA KORT RAPPORT SAMT VALIDERA KODEN
 
 // KAP 4 - objects and arrays: the weresquirrel - computing correlation
 // tar upp - introduktion till basic data structure
@@ -257,28 +258,204 @@
 // excersise
 
 // range
-function range(num1, num2, num3){
-    let range = [];
+// function range(num1, num2, num3){
+//     let range = [];
 
-    if(num1 > num2 ){
-        for(let i = num1; i >= num2; i--){
-            range.push(i);
-            if(num3) {
-                i -= (num3 -1)
-            }
-        }
-    } else {
-        for(let i = num1; i <= num2; i++){
-            range.push(i);
-            if(num3) {
-                i += (num3 -1)
-            }
-        }
-    }
-    return range;
-}
+//     if(num1 > num2 ){
+//         for(let i = num1; i >= num2; i--){
+//             range.push(i);
+//             if(num3) {
+//                 i -= (num3 -1)
+//             }
+//         }
+//     } else {
+//         for(let i = num1; i <= num2; i++){
+//             range.push(i);
+//             if(num3) {
+//                 i += (num3 -1)
+//             }
+//         }
+//     }
+//     return range;
+// }
 
-console.log(range(5, 2));
+// console.log(range(5, 2));
 
 
 // Tisdag
+
+// video17 - ARRAYS
+// deklarera och tilldela
+// var roads = []
+// roads[0] = "stone"
+// roads[1] = "dirt"
+// roads[2] = "cement"
+// roads[3] = "tar"
+// var roads = ["stone", "dirt", "cement", "tar"]
+// roads[1] = "cobblestone"
+// var roadTravelled = roads[1]
+// console.log(roadTravelled)
+
+// video 18 - OBJECTS
+// NOTES:
+// 1) Variables innuti i en object kallas för properties
+// 2) "real life objects" har flera properties
+// 3) man använder "." för att komma åt en objects properties (variabler)
+// 4) funktioner i objects kallas för metoder
+
+// ex:
+// OBJECT är bättre för att det finns ett nyckel och värde par
+// nyckeln beskriver värdet
+// var orcObject = {
+//     color : "green",
+//     height : 5,
+//     weight : 180
+//     yell : function (){
+//      console.log("Orc's are the best!")
+//     }
+// }
+
+// använda / komma åt värdern / metoder från ett objects:
+// orcObject.color;
+// orcObject.yell();
+
+// ARRAY
+// inte så bra på att förvara värde, index är svår att specificera
+// var orcArray = [
+//     "green", 5, 180
+// ]
+
+// video 19 - OBJECTS part 2 Metoder i object är funktioner
+
+// video 20 - OBJECTS part 3 code-a-long
+// värden kommer alltid att ändras / objects är dynamiska
+
+// var orc = {
+//     hair : "green",
+//     age : 26,
+//     stomachFull : true,
+//     eat : function(){
+//         console.log("Yum Yum");
+//     }
+// }
+
+// var newAge = orc.age +2
+// console.log(newAge)
+
+// if(orc.stomachFull === true){
+//     orc.eat()
+// }
+// else {
+//     console.log("Not eating")
+// }
+
+// video 21 - OBJECTS - part 4
+
+// RECAP!!!!:
+// 3st primitiva datatyper i Javascript:
+// String
+// Number
+// Boolean
+
+// Man kan ändra datatyperna i objectens properties
+// Det går att deklarera och tilldela properties i objects
+// för att ta bort en property i en object använder man nyckelordet delete + propertyn man vill ta bort
+// properties i objects som inte finns eller inte har ett värde returnerar undefined
+
+// var orc = {
+//     hair : "green",
+//     age : 26,
+//     stomachFull : true,
+// }
+
+// orc.hair = "purple"
+// orc.hair = 1
+// orc.hair2 = "red"
+
+// delete orc.hair2
+
+// console.log(orc.hair)
+// console.log(orc.hair2)
+
+
+// video 22 - STRING OBJECTS
+
+// Standalone or primitiva variabler
+// var color = "green" // String Object
+// var height : 5 // Math Object and Number Object
+
+// custom objects:
+// var orc = {
+//     color: "green",
+//     height: 5,
+//     weight: 180
+// }
+// orc.color; // "green"
+
+// global object
+// 1) objects som javascript provides som vi kan använda
+// 2) som är redan skrivna för oss så att vi kan använda dess properties och metoder
+
+// STRING OBJECT
+// här så inkapslar String Objectet värdet till en variabel
+// var hello = "Hello how are you doing";
+
+// String objects metoder
+// hello = hello.toUpperCase()
+// hello = hello.toLowerCase()
+
+// metod som returnerar char-värdet i en string
+// hello = hello.charAt(4)
+
+// metod som byter ut ett string-värde i en string med ett annat string-värde
+// hello = hello.replace('doing', 'today')
+
+// FUNKAR INTE MEN FLER METODER I STRING OBJECTET
+// hello = hello.italics()
+// hello = hello.bold()
+
+// String objects properties
+// hello.length
+
+// console.log(hello)
+
+
+// ONSDAG
+// video 23 - MATH - OBJECTS
+
+// var number = 4.7;
+// Math.round(RUNDAR UPP eller NER DET SOM SKICKAS IN)
+// var newNumber = 26 + Math.round(number)
+
+// Math.ceil RUNDAR ALLTID UPP
+// var newNumber = 26 + Math.ceil(number)
+
+// Math.floor RUNDAR ALLTID NERÅT
+// var newNumber = 26 + Math.floor(number)
+// console.log(newNumber)
+
+// räknar ut roten ur
+// var number = Math.sqrt(25)
+// console.log(number)
+
+// video 24 - DATE OBJECTS
+// ny nyckelord = new
+// används för att skapa en ny instans av ett object
+// när man sätter dit () så skapas en konstruktor
+
+// var todayDate = new Date()
+
+// .todatstring() returnerar en mer lättläst formatering av date-värdet
+// var useString = todayDate.toDateString()
+
+// getYear() metoder hämtar bara
+// todayDate.getYear(17)
+
+// setMetoder tilldelar värdet
+// todayDate.setYear(2117)
+
+// console.log(todayDate)
+// console.log(useString)
+
+
+// TORSDAG - PROV och upphosvrätt (KOLLA js-fil)
