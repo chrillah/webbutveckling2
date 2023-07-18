@@ -459,3 +459,13 @@
 
 
 // TORSDAG - PROV och upphosvrätt (KOLLA js-fil)
+
+// Fredag
+// kap 13 - javascript and the browser
+// kort sammanfattning:
+// Kapitel 13 handlar om JavaScript och webbläsaren.
+// Det förklarar att webbläsare är nödvändiga för att köra JavaScript och att webbteknologin har utvecklats på ett decentraliserat sätt.
+// Kapitlet diskuterar också nätverk och internet, beskriver HTTP-protokollet för att hämta resurser och förklarar hur webbadresser (URL:er) fungerar.
+// Det ger en översikt över HTML, som är det vanligaste dokumentformatet för webbsidor, och förklarar hur HTML och JavaScript kan samverka.
+// Kapitlet diskuterar också webbsäkerhet och sandboxing, samt nämner historien om webbläsarkrig och behovet av kompatibilitet mellan olika webbläsare.
+// Slutligen nämns att dagens webbläsare är mer standardiserade och buggfria än tidigare.

@@ -1,11 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="adventure.js"></script>
-    <title>Document</title>
-</head>
-<body>
-</body>
+    <head>
+        <link type="text/css" rel="stylesheet" href="stylesheet.css">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="vecka3.js"></script>
+        <!-- <script src="adventure.js"></script> -->
+        <title>Document</title>
+    </head>
+    <br>
+        <!-- för video 26 vecka 3 -->
+        <!-- <p id="para1">Some text for this tutorial</p>
+    <button onclick="changeStyle()">submit</button> -->
+
+        <!-- för video 27 och 28 vecka 3 -->
+        <!-- <p id="para1">Some text for this tutorial</p>
+    <p id="para1">Some text for this tutorial</p>
+    <p id="para1">Some text for this tutorial</p>
+    <p id="para1">Some text for this tutorial</p>
+
+    <button onclick="changeStyle()">Hit submit if you want to change all the text</button> -->
+
+        <!-- kap14 Query selectors -->
+        <!-- <p>And if you go chasing
+        <span class="animal">rabbits</span></p>
+      <p>And you know you're going to fall</p>
+      <p>Tell 'em a <span class="character">hookah smoking
+        <span class="animal">caterpillar</span></span></p>
+      <p>Has given you the call</p>
+
+      <script>
+        function count(selector) {
+          return document.querySelectorAll(selector).length;
+        }
+        console.log(count("p"));           // All <p> elements
+        // → 4
+        console.log(count(".animal"));     // Class animal
+        // → 2
+        console.log(count("p .animal"));   // Animal inside of <p>
+        // → 2
+        console.log(count("p > .animal")); // Direct child of <p>
+        // → 1
+      </script> -->
+
+        <!-- kap14 Positioning and animating  -->
+        <!-- <p style="text-align: center">
+        <img src="img/cat.png" style="position: relative">
+      </p>
+      <script>
+        let cat = document.querySelector("img");
+        let angle = Math.PI / 2;
+        function animate(time, lastTime) {
+          if (lastTime != null) {
+            angle += (time - lastTime) * 0.001;
+          }
+          cat.style.top = (Math.sin(angle) * 20) + "px";
+          cat.style.left = (Math.cos(angle) * 200) + "px";
+          requestAnimationFrame(newTime => animate(newTime, time));
+        }
+        requestAnimationFrame(animate);
+      </script> -->
+
+        <!-- för video 29 -->
+        <!-- <p class="para">Some text for this tutorial</p>
+        <p class="para">Some text for this tutorial</p>
+        <button onclick="changeStyle()">Hit submit to change the text</button> -->
+
+        <!-- för video 30 -->
+        <!-- <p class="para">Old Text 1</p>
+        <p class="para">Old Text 2</p>
+        <button onclick="changeStyle()">Hit submit for some new text</button> -->
+
+        <!-- för video 31 -->
+        <!-- <p class="para"> Hello there </p>
+        <p class="para"> from the moon </p>
+        <p class="para"> </p>
+        <button onclick="changeStyle()">Hit submit for combine these words</button> -->
+
+        <!-- för video 49 och 50 -->
+        <!-- <p class="para"> Hello there </p>
+        <p class="para"> from the moon </p>
+        <p class="para"> </p>
+        <button id="test" onclick="changeStyle()">Hit submit for combine these words</button> -->
+
+        <!-- för video 32 -->
+        <!-- <img src="/img/stalin.jpeg" id="image" /> </br> </br>
+        <button onclick="changeStyle()">Hit the button to change image</button> -->
+
+        <!-- för video 36 och 37 -->
+        <!-- <div id="main">
+
+            <h2>HANNIBAL - THE BATTLE OF CANNAE</h1>
+            <p>
+            After defeating the Romans at the Battle of Lake Trasimene, Hannibal now moved
+            his forces down south.  There was panic in Rome and Quintus Fabius Maximus was
+            appointed dictator to deal with Hannibal.  Fabius, however, refused to meet
+            Hannibal in the open field and this strategy became highly unpopular in Rome.
+            Romans were used to attacking, not hiding.  The Romans were forced to
+            go on the offensive after Hannibal positioned his forces betweeen Rome and
+            it's vital grain supply.  This setup the epic Battle of Cannae.  Here Hannibal
+            defeated the Romans inflicting the worst single day defeat in Rome's history.
+            </p>
+
+            <p>
+            The Romans were then forced to retreat to Rome.  It was a total defeat.
+            </p>
+
+            <h2>AFTERMATH OF THE BATTLE OF CANNAE</h1>
+            <p>
+            After the horrific defeat at the Battle of Cannae, the Romans reinstituted
+            Fabius' avoidance strategy.  The Romans no longer refused to meet Hannibal in
+            head on collisons.  Rather the Roman army kept a watchful eye on Hannibal, but
+            always at a close distance.
+            </p>
+            <p>
+            The avoidance strategy worked but it took forever.  It took almost two long
+            decades to drive Hannibal out of Italy.  And even then Hannibal was never
+            defeated in Italy.  The Romans, adopting a tactic out of Hannibal's playbook,
+            launched an attack against Carthage itself. This forced Hannibal to travel back
+            to Africa to defend the city.  Here he was defeated at the Battle of Zama.
+
+            </p>
+
+
+            </div>
+
+            &nbsp&nbsp
+            <button onclick="newParagraph()">Click if you want to
+            read about another battle </button> -->
+
+
+            <!-- för video 38 -->
+        <!-- <div id="main">
+
+            <h2>HANNIBAL - THE BATTLE OF CANNAE</h1>
+            <p>
+            After defeating the Romans at the Battle of Lake Trasimene, Hannibal now moved
+            his forces down south.  There was panic in Rome and Quintus Fabius Maximus was
+            appointed dictator to deal with Hannibal.  Fabius, however, refused to meet
+            Hannibal in the open field and this strategy became highly unpopular in Rome.
+            Romans were used to attacking, not hiding.  The Romans were forced to
+            go on the offensive after Hannibal positioned his forces betweeen Rome and
+            it's vital grain supply.  This setup the epic Battle of Cannae.  Here Hannibal
+            defeated the Romans inflicting the worst single day defeat in Rome's history.
+            </p>
+
+            <p>
+            The Romans were then forced to retreat to Rome.  It was a total defeat.
+            </p>
+
+            <h2>AFTERMATH OF THE BATTLE OF CANNAE</h1>
+            <p>
+            After the horrific defeat at the Battle of Cannae, the Romans reinstituted
+            Fabius' avoidance strategy.  The Romans no longer refused to meet Hannibal in
+            head on collisons.  Rather the Roman army kept a watchful eye on Hannibal, but
+            always at a close distance.
+            </p>
+            <p>
+            The avoidance strategy worked but it took forever.  It took almost two long
+            decades to drive Hannibal out of Italy.  And even then Hannibal was never
+            defeated in Italy.  The Romans, adopting a tactic out of Hannibal's playbook,
+            launched an attack against Carthage itself. This forced Hannibal to travel back
+            to Africa to defend the city.  Here he was defeated at the Battle of Zama.
+
+            </p>
+
+
+            </div>
+
+            &nbsp&nbsp
+            <button onclick="newParagraph()">Click if you want to
+            read about another battle </button>
+            <br><br>
+            &nbsp&nbsp
+            <button onclick="removeHeader()">Click here to remove section</button> -->
+
+            <!-- video 39 -->
+            <div id="main">
+
+                <h2>HANNIBAL - THE BATTLE OF CANNAE</h1>
+                <p>
+                After defeating the Romans at the Battle of Lake Trasimene, Hannibal now moved
+                his forces down south.  There was panic in Rome and Quintus Fabius Maximus was
+                appointed dictator to deal with Hannibal.  Fabius, however, refused to meet
+                Hannibal in the open field and this strategy became highly unpopular in Rome.
+                Romans were used to attacking, not hiding.  The Romans were forced to
+                go on the offensive after Hannibal positioned his forces betweeen Rome and
+                it's vital grain supply.  This setup the epic Battle of Cannae.  Here Hannibal
+                defeated the Romans inflicting the worst single day defeat in Rome's history.
+                </p>
+
+                <p>
+                The Romans were then forced to retreat to Rome.  It was a total defeat.
+                </p>
+
+                <h2>AFTERMATH OF THE BATTLE OF CANNAE</h1>
+                <p>
+                After the horrific defeat at the Battle of Cannae, the Romans reinstituted
+                Fabius' avoidance strategy.  The Romans no longer refused to meet Hannibal in
+                head on collisons.  Rather the Roman army kept a watchful eye on Hannibal, but
+                always at a close distance.
+                </p>
+                <p>
+                The avoidance strategy worked but it took forever.  It took almost two long
+                decades to drive Hannibal out of Italy.  And even then Hannibal was never
+                defeated in Italy.  The Romans, adopting a tactic out of Hannibal's playbook,
+                launched an attack against Carthage itself. This forced Hannibal to travel back
+                to Africa to defend the city.  Here he was defeated at the Battle of Zama.
+
+                </p>
+
+
+                </div>
+
+                &nbsp&nbsp
+                <button onclick="newParagraph()">Click if you want to
+                read about another battle </button>
+                <br><br>
+                &nbsp&nbsp
+                <button onclick="removeHeader()">Click here to remove section</button>
+
+    </body>
 </html>
