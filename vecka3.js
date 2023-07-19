@@ -63,10 +63,15 @@
 // Den följande koden definierar en hjälpfunktion elt, som skapar en elementnod och behandlar resten av sina argument som barn till den noden. Denna funktion används sedan för att lägga till en attribut i ett citat.
 
 // Om Attributes
-// Elementattribut såsom href för länkar kan nås genom en egenskap med samma namn på elementets DOM-objekt. Detta gäller för de flesta vanligt använda standardattributen.
-// Men HTML tillåter dig att ange vilket attribut du vill på noder. Det kan vara användbart eftersom det låter dig lagra extra information i ett dokument. Om du skapar egna attributnamn kommer sådana attribut dock inte att finnas som egenskaper på elementets nod. Istället måste du använda metoderna getAttribute och setAttribute för att arbeta med dem.
+// Elementattribut såsom href för länkar kan nås genom en egenskap med samma namn på elementets DOM-objekt.
+// Detta gäller för de flesta vanligt använda standardattributen.
+// Men HTML tillåter dig att ange vilket attribut du vill på noder.
+// Det kan vara användbart eftersom det låter dig lagra extra information i ett dokument.
+// Om du skapar egna attributnamn kommer sådana attribut dock inte att finnas som egenskaper på elementets nod.
+// Istället måste du använda metoderna getAttribute och setAttribute för att arbeta med dem.
 // Det rekommenderas att förställa namnen på sådana egna attribut med "data-" för att se till att de inte konflikterar med några andra attribut.
-// Det finns ett vanligt använd attribut, class, som är ett nyckelord i JavaScript. Av historiska skäl - några äldre JavaScript-implementeringar kunde inte hantera egenskapsnamn som matchade nyckelord - används egenskapen som ger åtkomst till detta attribut som className. Du kan också nå det under sitt verkliga namn, "class", genom att använda metoderna getAttribute och setAttribute.
+// Det finns ett vanligt använd attribut, class, som är ett nyckelord i JavaScript.
+// Av historiska skäl - några äldre JavaScript-implementeringar kunde inte hantera egenskapsnamn som matchade nyckelord - används egenskapen som ger åtkomst till detta attribut som className. Du kan också nå det under sitt verkliga namn, "class", genom att använda metoderna getAttribute och setAttribute.
 
 // video 25 - document object model
 // document, typ HTML-index.filen men

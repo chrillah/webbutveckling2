@@ -1,5 +1,9 @@
 // Måndag - ett äventyr med javascript deadline 16/7
 // MÅSTE SKRIVA KORT RAPPORT SAMT VALIDERA KODEN
+// feedback: SKRIV ALL SCRIPT-KOD I EN ANONYM FUNCTION
+// (function () {
+//     console.log('Consol loggar från en anonym funktion')
+// })();
 
 // KAP 4 - objects and arrays: the weresquirrel - computing correlation
 // tar upp - introduktion till basic data structure
