@@ -337,39 +337,44 @@
 // Vad är en attribut? -> är inte ett barn som ett element,
 // en attribut är en del av ett element
 
-function newParagraph() {
-    var elementH = document.createElement('h2')
-    var main = document.getElementById('main')
-    main.appendChild(elementH)
-    var textH = document.createTextNode('The Battle of Salamis')
-    elementH.appendChild(textH)
+// function newParagraph() {
+//     var elementH = document.createElement('h2')
+//     var main = document.getElementById('main')
+//     main.appendChild(elementH)
+//     var textH = document.createTextNode('The Battle of Salamis')
+//     elementH.appendChild(textH)
 
-    var element = document.createElement('p')
-    main.appendChild(element)
+//     var element = document.createElement('p')
+//     main.appendChild(element)
 
-    var text = document.createTextNode(
-        'The Battle of Salamis was fought between an alliance of Greek cities and the Persian Empire in 480 BC.  The Greeks decisively defeated the Persian navy.'
-    )
+//     var text = document.createTextNode(
+//         'The Battle of Salamis was fought between an alliance of Greek cities and the Persian Empire in 480 BC.  The Greeks decisively defeated the Persian navy.'
+//     )
 
-    element.appendChild(text)
+//     element.appendChild(text)
 
     // vi skapar en attribute, ett id likt: <div id="test"></div>
-    var pAttribute = document.createAttribute("id")
+    // var pAttribute = document.createAttribute("id")
 
     // vi ger det ett värde, ett namn,
-    pAttribute.value = "test"
+    // pAttribute.value = "test"
 
     // vi lägger till attributet på elementen
-    element.setAttributeNode(pAttribute)
-}
+//     element.setAttributeNode(pAttribute)
+// }
 
-function removeHeader() {
-    var elementH = document.getElementsByTagName('h2') [2];
+// function removeHeader() {
+//     var elementH = document.getElementsByTagName('h2') [2];
 
-    let parent = elementH.parentNode;
+//     let parent = elementH.parentNode;
 
-    parent.removeChild(elementH);
+//     parent.removeChild(elementH);
 
-    let elementP = document.getElementsByTagName('p')[4];
-    parent.removeChild(elementP);
-}
+//     let elementP = document.getElementsByTagName('p')[4];
+//     parent.removeChild(elementP);
+// }
+
+// Onsdag
+
+// Javascript och DOM - uppgift
+// uppgifterna klara, rapport kvar
