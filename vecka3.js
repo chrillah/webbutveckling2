@@ -320,13 +320,13 @@
 
 // funktion för att ta bort header och paragraph
 // function removeHeader() {
-    // specifierar vilket child i nodelistan som ska bort
-    // var elementH = document.getElementsByTagName('h2') [2];
+// specifierar vilket child i nodelistan som ska bort
+// var elementH = document.getElementsByTagName('h2') [2];
 
-    // specificiera föräldern med hjälp av elementetH property
-    // let parent = elementH.parentNode;
+// specificiera föräldern med hjälp av elementetH property
+// let parent = elementH.parentNode;
 
-    // tar bort barnet från föäldern
+// tar bort barnet från föäldern
 //     parent.removeChild(elementH);
 
 //     let elementP = document.getElementsByTagName('p')[4];
@@ -353,13 +353,13 @@
 
 //     element.appendChild(text)
 
-    // vi skapar en attribute, ett id likt: <div id="test"></div>
-    // var pAttribute = document.createAttribute("id")
+// vi skapar en attribute, ett id likt: <div id="test"></div>
+// var pAttribute = document.createAttribute("id")
 
-    // vi ger det ett värde, ett namn,
-    // pAttribute.value = "test"
+// vi ger det ett värde, ett namn,
+// pAttribute.value = "test"
 
-    // vi lägger till attributet på elementen
+// vi lägger till attributet på elementen
 //     element.setAttributeNode(pAttribute)
 // }
 
@@ -377,4 +377,183 @@
 // Onsdag
 
 // Javascript och DOM - uppgift
-// uppgifterna klara, rapport kvar
+// uppgiften klar EJ INLÄMNAD!
+
+// kap 15 - Handling Events
+// Läs s.243-245 Handling Events: Event handlers - Propagation
+
+// Event handlers
+// Event handlers används för att hantera händelser i gränssnitt.
+// Istället för att ständigt läsa av tillståndet av exempelvis en tangenttryckning (polling), kan systemet med hjälp av event handlers aktivt meddela programmet när en händelse inträffar.
+// I exemplet använder man window.addEventListener-metoden för att reagera på en klickhändelse genom att skriva ut "You knocked?" i konsolen.
+
+// Events and DOM nodes
+// Event handlers registreras i ett sammanhang (context) och kan finnas på olika DOM-noder eller objekt.
+// I exemplet registreras en click-handler på en knapp, vilket gör att den funktionen körs endast när knappen klickas på.
+// Genom att använda addEventListener-metoden kan flera handlers läggas till på en nod, och de kan även tas bort med removeEventListener-metoden genom att använda samma funktion som identifierare.
+
+// Event objects
+// Event handler-funktioner tar emot ett argument: eventobjektet.
+// Detta objekt innehåller ytterligare information om händelsen.
+// Till exempel kan man använda eventobjektets "button"-egenskap för att få reda på vilken musknapp som trycktes ned.
+
+// Propagation
+// Händelsespridning: För de flesta händelsetyper kommer handlers registrerade på noder med barn även att få händelser som inträffar i barnen.
+// Om en knapp inuti en paragraf klickas på kommer event handlers på paragrafen också att se klickhändelsen.
+// Om både paragrafen och knappen har en handler så kommer den mer specifika handlern, som på knappen, att köras först.
+// Händelsen sprids utåt från noden där den inträffade till dess föräldernod och vidare till dokumentets rot.
+// Stoppa händelsespridning med stopPropagation-metoden om man inte vill att handlers högre upp i trädet ska få händelsen.
+// Target-egenskapen på eventobjektet kan användas för att säkerställa att man hanterar rätt nod.
+
+// video 33 - intro to events
+// (onclick="Något görs") <- event, ska trigga igång något
+// två events, en av användaren, och en annan som utförs av något annat som triggar, onLoadEvent
+// 1) Välj element som ska trigga igång eventet
+// 2) Välj vilken typ av event som ska använda, onclick är ett sån typ av event
+// 3) Och sen när eventet triggas, ska något utföras.
+
+// ex:
+// ett event (onclick, kolla index) ska trigga denna funktion
+// function changeColor() {
+//     var text = (document.getElementById('para1').style.color = 'blue')
+// }
+
+// video 34 - The mouseover event
+// onmouseover="Något görs" -> triggas när musen är över elementet
+// onmouseout="Något görs" -> triggas när musen lämnar elementet
+
+// ex
+// function changeBackground() {
+//     var text = document.getElementById("para1").style.backgroundColor = "red"
+// }
+// function backToNormal() {
+//     var text = document.getElementById("para1").style.backgroundColor = ""
+// }
+
+// video 35 - Change image with mouseover
+// med onmouseover och onmouseout
+// function newPicture() {
+//     var image = document.getElementById("image").src="/img/lenin.jpeg"
+// }
+// function oldPicture() {
+//     var image = document.getElementById("image").src="/img/stalin.jpeg"
+// }
+
+// video 48 - Placement of script tag, vart placeras?
+// OBS! KOLLA INDEX
+
+// Torsdag
+// Läs s.247-253 Handling Events: Default actions - Scroll events
+
+// Default actions
+// Många händelser har en förvald åtgärd kopplad till dem.
+// JavaScript-händelseläsarna kan förhindra den normala beteendet med hjälp av preventDefault-metoden.
+// Detta kan användas för att skapa egna tangentbordskommandon eller kontextmenyer, men det kan också störa förväntat beteende på ett obehagligt sätt.
+// Vissa händelser kan inte påverkas alls av JavaScript, som att stänga fliken i webbläsaren.
+
+// Key events
+// När tangentbordets knappar trycks ned skickar webbläsaren ett "keydown"-händelse och när de släpps skickas ett "keyup"-händelse.
+// Exempelvis ändrar sidan färg till lila när V-tangenten hålls ned.
+// Modifieringsknappar som skift, kontroll, alt och meta (command på Mac) genererar också tangentbordshändelser.
+// För att känna igen tangentkombinationer kan shiftKey, ctrlKey, altKey och metaKey användas.
+// Element med fokus vid tangenttryckningen är de som genererar tangentbordshändelsen.
+// För att upptäcka textinmatning används "input"-händelser på taggar som <input> och <textarea>.
+
+// Pointer events
+// Det finns för närvarande två allmänt använda sätt att peka på saker på en skärm: möss (inklusive enheter som fungerar som möss, såsom pekplattor och rullkulor) och pekskärmar.
+// Dessa genererar olika typer av händelser.
+
+// Mouse clicks
+// Musklicks genererar flera händelser: "mousedown" och "mouseup" när knappen trycks ned och släpps.
+// Ett "click"-händelse utlöses när musknappen trycks ned och släpps på samma element.
+// Vid två snabba klick utlöses ett "dblclick"-händelse. För att få exakta koordinater för händelsen används egenskaperna clientX, clientY (relativt fönstrets övre vänstra hörn) eller pageX, pageY (relativt hela dokumentets övre vänstra hörn).
+// Ett enkelt ritprogram demonstreras genom att skapa punkter på dokumentet vid varje klick.
+
+// Mouse motion
+// Varje gång muspekaren rör sig utlöses en "mousemove"-händelse som kan användas för att spåra musens position.
+// I exemplet kan du dra en bar för att ändra dess bredd, och händelsehanteraren är registrerad för hela fönstret för att möjliggöra storleksändring även om musen går utanför baren.
+// När knappen släpps avslutas storleksändringen med hjälp av "buttons"-egenskapen, där knapparnas koder summeras för att indikera vilka knappar som är nedtryckta.
+
+// Touch events
+// För att göra webben användbar på tidiga pekskärmsenheter behandlade webbläsare pekinteraktioner som musinteraktioner, men detta fungerar inte lika robust.
+// Pekskärmar har egna händelsetyper, som "touchstart", "touchmove", och "touchend".
+// Eftersom pekskärmar kan känna av flera fingrar samtidigt, finns det flera koordinater associerade med händelserna.
+// För att hantera pekinteraktioner kan preventDefault användas för att ändra webbläsarens standardbeteende.
+
+// Scroll events
+// När ett element rullas visas en "scroll"-händelse.
+// Detta kan användas för att visa användarens aktuella visningsområde eller visa framsteg, som en framstegsindikator.
+// Exemplet visar hur man skapar en framstegsindikator som fylls när användaren rullar ner sidan.
+// Att använda position: fixed på elementet gör att det hålls fast på skärmen, och genom att ändra dess bredd med % som enhet visas förloppet relativt till sidans bredd.
+// Anropet preventDefault på en scroll-händelse förhindrar inte att själva rullningen sker.
+
+// video 40 - Traversing the DOM (korsar DOM)
+// noder, föräldrar och barn
+// childNodes -> kan selektera allt möjligt från föräldern, som whitespace!
+// firstElementChild -> väljer det första barnet (indexplats 0)
+// lastElementChild -> väljer det sista barnet (sista indexplats)
+// function changeText() {
+//     var parent = document.getElementById("main")
+
+//     var child = parent.firstElementChild
+
+//     child.style.color = "blue"
+// }
+
+// Läs s.254-257 Handling Events: Focus events - Debouncing
+// Focus events
+// När ett element får fokus utlöses en "focus"-händelse, och när det tappar fokus får det en "blur"-händelse.
+// Dessa händelser propagerar inte uppåt i DOM-trädet, så förälderelementet blir inte medvetet om att barnet fått eller tappat fokus.
+// Exemplet visar hur man visar hjälptext för det textfält som för närvarande har fokus.
+// När användaren byter mellan webbläsarflikar eller fönster, får fönstret "focus" och "blur"-händelser.
+
+// Load event
+// När en sida har laddats klart utlöses en "load"-händelse på fönstret och dokumentets body-objekt.
+// Detta används ofta för att schemalägga initialiseringsåtgärder som kräver att hela dokumentet har byggts upp.
+// "Load"-händelser utlöses också för element som laddar externa filer, som bilder och script-taggar.
+// Om en sida stängs eller navigeras bort utlöses en "beforeunload"-händelse som kan användas för att förhindra att användaren av misstag stänger ett dokument utan att spara sitt arbete, men moderna webbläsare visar sällan dialogrutor med anpassade meddelanden på grund av missbruk.
+
+// Events and the event loop
+// I sammanhanget med händelseloopen fungerar webbläsarens händelsehanterare som andra asynkrona notifieringar.
+// De schemaläggs när händelsen inträffar men måste vänta på att andra körande skript ska slutföras innan de får chansen att köras.
+// Om händelseloopen är upptagen med annat arbete kommer interaktioner med sidan att fördröjas.
+// För att hantera tidskrävande arbete i bakgrunden erbjuder webbläsare "web workers," som är JavaScript-processer som körs parallellt med huvudskriptet på en separat tidslinje.
+// För att kommunicera med web workers används postMessage-funktionen som skickar meddelanden mellan de olika trådarna. Endast värden som kan representeras som JSON kan skickas som meddelanden.
+
+// Timers
+// Timers används för att schemalägga funktioner som ska köras senare.
+// setTimeout används för att köra en funktion efter ett angivet antal millisekunder,
+// och clearTimeout används för att avbryta schemalagda funktioner.
+// setInterval och clearInterval används för att upprepa funktioner med ett visst intervall av millisekunder.
+
+// Debouncing
+// Debouncing är en metod för att hantera händelser som kan utlösas upprepade gånger snabbt efter varandra.
+// Genom att använda setTimeout kan man vänta med att hantera händelserna tills en paus inträffar.
+// Detta förhindrar att dokumentet upplevs som långsamt vid snabb interaktion.
+// Exempelvis kan man vänta 500 ms efter en "input"-händelse innan man utför en åtgärd.
+// Ett annat exempel är att visa muspekarens koordinater på skärmen först efter 250 ms efter en "mousemove"-händelse.
+
+// video 41 - Traversing the DOM (korsar DOM) part 2
+// noder, föräldrar och barn - fast åt andra hållet
+// parentNode -> returnera barnets förälder
+// function changeText() {
+//     var child = document.getElementById("p1");
+//     var parent = child.parentNode
+
+//     parent.style.color = "blue"
+// }
+
+// video 42 - Traversing the DOM (korsar DOM) part 3
+// Siblings, syskon, fast noder och inte element
+
+// var sibling = para2.nextElementSibling syskon efter
+// var sibling = para2.previousElementSibling syskon före
+
+// function changeText() {
+//     var para2 = document.getElementById("p2")
+//     var sibling = para2.previousElementSibling
+//     sibling.style.color = "blue"
+// }
+
+// Fredag
+// Gör övningarna på s.259 (kap 15)

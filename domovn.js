@@ -14,7 +14,7 @@
     // Här sätter vi klassnamnet "bodyCopy" till alla p-element med en for lopp
     // loppen startar på 0, vilket är det första indexplatsen i listan av noder
     // och loopar tills den når sista indexplatsen
-    for (var i = 0; i < listOfParagraphs.length; i++) {
+    for (var i = 0; i < paragraphList.length; i++) {
         paragraphList[i].className = 'bodyCopy';
     }
 
@@ -71,7 +71,6 @@
     // list1-varibelns children, vilket är en lista med alla li-taggar
     var list1Children = list1.children;
 
-    console.log(list1Children.length)
     // Loopar igenom
     for(i = 0; i <= list1Children.length; i++){
         // Kollar om li-taggens plats i indexet är ojämnt med hjälp av modulus %
